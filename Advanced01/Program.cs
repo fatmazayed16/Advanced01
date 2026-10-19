@@ -136,6 +136,11 @@
             Console.WriteLine(dog.Id);
 
             #endregion
+
+            #region Q13
+            //What does the 'default' keyword do in generics?
+            //The default keyword returns the default value of a type. For example, it returns 0 for int, false for bool, and null for reference types such as string.
+            #endregion
         }
     }
 }
