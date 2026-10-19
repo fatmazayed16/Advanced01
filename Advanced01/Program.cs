@@ -185,6 +185,15 @@
             //Covariance (out): بنستخدم نوع مشتق مكان نوع أعم، زي IEnumerable<Dog> مكان IEnumerable<Animal>.
             // Contravariance(in): بنستخدم نوع أعم مكان نوع مشتق، زي Action<Animal> مكان Action< Dog >.
             #endregion
+
+            #region Q18
+            //In generic types, static members are shared among all instances of the same closed generic type, but each different type argument has its own separate copy of the static members.
+            Counter<int>.Count = 10;
+            Counter<string>.Count = 20;
+
+            Console.WriteLine(Counter<int>.Count);    // 10
+            Console.WriteLine(Counter<string>.Count); // 20
+            #endregion
         }
     }
 }
