@@ -29,6 +29,16 @@
             Pair<string , int> pair = new Pair<string, int>("Ahmed", 1);
             Console.WriteLine($"Value: {pair.Value}, Key: {pair.Key}");
             #endregion
+
+            #region Q4
+            //A generic method is a method that can work with different data types using a type parameter, without creating a separate method for each data type.
+
+            int x = 10;
+            int y = 20;
+            GenericMethod.Swap(ref x, ref y);
+            Console.WriteLine($"x: {x}, y: {y}"); // Output: x: 20, y: 10
+
+            #endregion
         }
     }
 }
