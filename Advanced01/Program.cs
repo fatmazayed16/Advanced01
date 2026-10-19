@@ -48,6 +48,31 @@
             // A generic Interface is an interface that can work with different data types using a type parameter. It allows you to define a contract for classes that implement the interface, without specifying the data type in advance.
 
             #endregion
+
+            #region Test
+            Repsitory<Product> product = new Repsitory<Product>();
+            product.Add(new Product { Id = 1, Name = "Product 1", Price = 100 });
+            product.Add(new Product { Id = 2, Name = "Product 2", Price = 200 });
+            product.Add(new Product { Id = 3, Name = "Product 3", Price = 300 });
+
+            product.GetAll().ForEach(p => Console.WriteLine($"Id: {p.Id}, Name: {p.Name}, Price: {p.Price}"));
+
+            Console.WriteLine("-----------------Searching for product with ID 2-----------------");
+            Product? foundProduct = product.GetById(2);
+            Console.WriteLine($"Found Product: {foundProduct?.Name}, Price: {foundProduct?.Price}");
+
+            product.Update (new Product { Id = 2, Name = "Updated Product 2", Price = 250 });
+            foundProduct= product.GetById(2);
+            Console.WriteLine("------------------After Update product 2 ------------------");
+            Console.WriteLine(foundProduct?.Name);
+            Console.WriteLine(foundProduct?.Price);
+
+            
+            product.Remove(1);
+            Console.WriteLine("------------------After remove product 1 ------------------");
+            product.GetAll().ForEach(p => Console.WriteLine($"Id: {p.Id}, Name: {p.Name}, Price: {p.Price}"));
+
+            #endregion
         }
     }
 }
