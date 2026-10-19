@@ -92,6 +92,18 @@
             ContainerString<string> Names = new ContainerString<string>();
             Names.Value = "Ahmed"; // This line is valid because string is a ref type (class).
             #endregion
+
+            #region Q9
+            // What is the 'new()' constraint?
+            // It requires the type to have a public parameterless constructor so we can create an object using new T()
+
+            #region Test New Constraint
+            ContainerWithNew<Product> container = new ContainerWithNew<Product>();
+
+            Product product01 = container.Create();
+            #endregion
+
+            #endregion
         }
     }
 }
