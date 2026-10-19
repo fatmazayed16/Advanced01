@@ -180,6 +180,11 @@
 
             dogAction(new Dog());
             #endregion
+
+            #region Q17
+            //Covariance (out): بنستخدم نوع مشتق مكان نوع أعم، زي IEnumerable<Dog> مكان IEnumerable<Animal>.
+            // Contravariance(in): بنستخدم نوع أعم مكان نوع مشتق، زي Action<Animal> مكان Action< Dog >.
+            #endregion
         }
     }
 }
