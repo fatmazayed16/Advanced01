@@ -11,10 +11,10 @@
             #endregion
 
             #region Q2
-            Container<int> intContainer = new Container<int>();
+            Container<int> intContainer = new();
             intContainer.Add(5);
             Console.WriteLine(intContainer.Get()); // Output: 5
-            Container<string> stringContainer = new Container<string>();
+            Container<string> stringContainer = new();
             stringContainer.Add("hello Ahmed");
             Console.WriteLine(stringContainer.Get()); // Output: hello Ahmed
             #endregion
@@ -26,7 +26,7 @@
                   * وده بيسمحلي اني اخزن قيمتين مختلفتين في ال class
              */
 
-            Pair<string , int> pair = new Pair<string, int>("Ahmed", 1);
+            Pair<string , int> pair = new("Ahmed", 1);
             Console.WriteLine($"Value: {pair.Value}, Key: {pair.Key}");
             #endregion
 
@@ -42,6 +42,11 @@
 
             #region Q5
             Console.WriteLine($"Max : {GenericMethod.FindMax(10, 20)}");
+            #endregion
+
+            #region Q6
+            // A generic Interface is an interface that can work with different data types using a type parameter. It allows you to define a contract for classes that implement the interface, without specifying the data type in advance.
+
             #endregion
         }
     }

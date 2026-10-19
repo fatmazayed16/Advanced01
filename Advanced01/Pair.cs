@@ -1,13 +1,7 @@
 ﻿namespace Advanced01;
 
-internal class Pair<TValue, TKey>
+internal class Pair<TValue, TKey>(TValue value, TKey key)
 {
-    public TValue Value { get; set; } = default!;
-    public TKey Key { get; set; } = default!;
-    public Pair(TValue value, TKey key)
-    {
-        Value = value;
-        Key = key;
-    }
-
+    public TValue Value { get; set; } = value;
+    public TKey Key { get; set; } = key;
 }
