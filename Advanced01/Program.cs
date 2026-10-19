@@ -166,7 +166,19 @@
             // Therefore, we can assign an IEnumerable<Dog> to an IEnumerable<Animal> variable.
             // Not all generic types support covariance; the interface or delegate must use the 'out' keyword.
 
+            #endregion
 
+            #region Q16
+            //Contravariance allows a less derived type to be used where a more derived type is expected. The in keyword enables contravariance in generic interfaces and delegates by allowing the type parameter to be used as an input type.
+
+            Action<Animal> animalAction = animal => Console.WriteLine("Animal");
+            Action<Dog> dogAction = animalAction;
+
+            // Action<in T> supports contravariance.
+            // Action<Animal> can be used where Action<Dog> is expected,
+            // because a method that accepts any Animal can also accept a Dog.
+
+            dogAction(new Dog());
             #endregion
         }
     }
