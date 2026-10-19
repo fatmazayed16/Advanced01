@@ -50,7 +50,7 @@
             #endregion
 
             #region Test
-            Repsitory<Product> product = new Repsitory<Product>();
+            Repsitory<Product> product = new();
             product.Add(new Product { Id = 1, Name = "Product 1", Price = 100 });
             product.Add(new Product { Id = 2, Name = "Product 2", Price = 200 });
             product.Add(new Product { Id = 3, Name = "Product 3", Price = 300 });
@@ -206,6 +206,25 @@
                internal class SpecialContainer<T> : Container<T> { }
 
             */
+            #endregion
+
+            #region Q20
+            Cache<int, string> cache = new Cache<int, string>();
+
+            // Add
+            cache.Add(1, "Item01", TimeSpan.FromMinutes(5));
+            cache.Add(2, "Item02", TimeSpan.FromSeconds(-1));
+
+            // Get
+            Console.WriteLine(cache.Get(1)); 
+
+            // Contains
+            Console.WriteLine(cache.Contains(1)); // True
+            Console.WriteLine(cache.Contains(2)); // False (Expired)
+
+            // Remove
+            Console.WriteLine(cache.Remove(1)); // True
+            Console.WriteLine(cache.Remove(1)); // False cuz it is already deleted>
             #endregion
         }
     }
