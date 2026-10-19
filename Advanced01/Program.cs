@@ -153,6 +153,21 @@
             Console.WriteLine(numbers.Get(5));  // 0
             Console.WriteLine(numbers.Get(-1)); //0
             #endregion
+
+            #region Q15
+            //Covariance allows a more derived type to be used where a less derived type is expected. The out keyword enables covariance in generic interfaces and delegates by allowing the type parameter to be used as an output type.
+
+            Animal animal = new Dog();
+
+            IEnumerable<Dog> dogs = new List<Dog>();
+            IEnumerable<Animal> animals = dogs;
+            // Dog inherits from Animal.
+            // IEnumerable<out T> supports covariance.
+            // Therefore, we can assign an IEnumerable<Dog> to an IEnumerable<Animal> variable.
+            // Not all generic types support covariance; the interface or delegate must use the 'out' keyword.
+
+
+            #endregion
         }
     }
 }
