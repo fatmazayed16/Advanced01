@@ -73,6 +73,17 @@
             product.GetAll().ForEach(p => Console.WriteLine($"Id: {p.Id}, Name: {p.Name}, Price: {p.Price}"));
 
             #endregion
+            #region Q7
+            // What is the 'struct' constraint?
+            // The 'struct' constraint is a generic type constraint that restricts the type parameter to value types (structs) only. It ensures that the type used with the generic class or method is a value type, which can help improve performance and memory usage in certain scenarios.
+
+            Container<int> number = new Container<int>();
+            number.Value = 10; // This line is valid because int is a value type (struct).
+
+            //Container<string> Names = new Container<string>();
+            //Names.Value = "Ahmed"; // This line will cause a compile-time error because string is not a value type (struct).
+
+            #endregion
         }
     }
 }

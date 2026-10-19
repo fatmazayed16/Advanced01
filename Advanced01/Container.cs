@@ -1,6 +1,6 @@
 ﻿namespace Advanced01;
 
-internal class Container<T>
+internal class Container<T> where T : struct
 {
     public T Value { get; set; } = default!;
     public void Add (T a)
