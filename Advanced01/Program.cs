@@ -39,6 +39,10 @@
             Console.WriteLine($"x: {x}, y: {y}"); // Output: x: 20, y: 10
 
             #endregion
+
+            #region Q5
+            Console.WriteLine($"Max : {GenericMethod.FindMax(10, 20)}");
+            #endregion
         }
     }
 }
