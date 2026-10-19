@@ -18,6 +18,17 @@
             stringContainer.Add("hello Ahmed");
             Console.WriteLine(stringContainer.Get()); // Output: hello Ahmed
             #endregion
+
+            #region Q3
+            /* What are multiple type parameters?
+                  * يعني دل م ال generic class يقدر يستقبل parameter واحد لا يقدر يستقل كذا parameter
+                  * Pair <int, string>
+                  * وده بيسمحلي اني اخزن قيمتين مختلفتين في ال class
+             */
+
+            Pair<string , int> pair = new Pair<string, int>("Ahmed", 1);
+            Console.WriteLine($"Value: {pair.Value}, Key: {pair.Key}");
+            #endregion
         }
     }
 }
