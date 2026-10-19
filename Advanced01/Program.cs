@@ -104,6 +104,12 @@
             #endregion
 
             #endregion
+
+            #region Q10
+            //What is the interface constraint?
+            //It requires the type we use to implement a specific interface.
+            // For example, we used the IEntity interface.
+            #endregion
         }
     }
 }
