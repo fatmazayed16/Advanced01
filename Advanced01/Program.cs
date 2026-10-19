@@ -110,6 +110,17 @@
             //It requires the type we use to implement a specific interface.
             // For example, we used the IEntity interface.
             #endregion
+
+            #region Q11
+            // What is the base class constraint?
+            // It requires the type to be a specific class or a class that inherits from it, meaning the base class or any of its derived classes.
+            ContainerWithBaseClass<Dog> container02 = new ContainerWithBaseClass<Dog>();
+            Dog dog = container02.Create();
+            dog.Name = "Bondok";
+            Console.WriteLine(dog.Name);
+            // ContainerWithBaseClass<Product>  -> Error cause Product does not inherit from Animal. 
+
+            #endregion
         }
     }
 }
