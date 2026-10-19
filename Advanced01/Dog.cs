@@ -1,5 +1,8 @@
-﻿namespace Advanced01;
+﻿using Advanced01.Interfaces;
 
-internal class Dog : Animal
+namespace Advanced01;
+
+internal class Dog : Animal , IEntety
 {
+    public int Id { get; set; }
 }

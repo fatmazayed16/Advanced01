@@ -1,6 +1,8 @@
-﻿namespace Advanced01;
+﻿using Advanced01.Interfaces;
 
-internal class ContainerWithBaseClass <T> where T : Animal , new()
+namespace Advanced01;
+
+internal class ContainerWithBaseClass <T> where T : Animal, IEntety, new()
 {
     public T Create()
     {

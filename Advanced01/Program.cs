@@ -121,6 +121,21 @@
             // ContainerWithBaseClass<Product>  -> Error cause Product does not inherit from Animal. 
 
             #endregion
+
+            #region Q12
+            //How do you apply multiple constraints?
+            //We use where T : and write the required constraints together, separating them with commas. If the new() constraint is included, it must always be the last constraint.
+
+            // // ContainerWithBaseClass demonstrates multiple constraints.
+
+            ContainerWithBaseClass<Dog> container03 = new ContainerWithBaseClass<Dog>();
+
+            Dog dog01 = container03.Create();
+            dog.Id = 1;
+
+            Console.WriteLine(dog.Id);
+
+            #endregion
         }
     }
 }
