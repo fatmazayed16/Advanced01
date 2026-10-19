@@ -141,6 +141,18 @@
             //What does the 'default' keyword do in generics?
             //The default keyword returns the default value of a type. For example, it returns 0 for int, false for bool, and null for reference types such as string.
             #endregion
+
+            #region Q14
+            // returns default when the index is invalid.
+
+            SafeList<int> numbers = new SafeList<int>();
+            numbers.Add(10);
+            numbers.Add(20);
+
+            Console.WriteLine(numbers.Get(1));  // 20
+            Console.WriteLine(numbers.Get(5));  // 0
+            Console.WriteLine(numbers.Get(-1)); //0
+            #endregion
         }
     }
 }
