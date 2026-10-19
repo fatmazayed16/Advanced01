@@ -194,6 +194,19 @@
             Console.WriteLine(Counter<int>.Count);    // 10
             Console.WriteLine(Counter<string>.Count); // 20
             #endregion
+
+            #region Q19
+            // A derived class can inherit from a generic class with a specific type argument.
+            // A generic derived class can pass its type parameter to the base generic class.
+            /*
+               internal class Container<T> { }
+               internal class ProductContainer : Container<Product> { }
+
+
+               internal class SpecialContainer<T> : Container<T> { }
+
+            */
+            #endregion
         }
     }
 }
