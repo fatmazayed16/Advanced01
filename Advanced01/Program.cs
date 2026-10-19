@@ -14,9 +14,9 @@
             Container<int> intContainer = new();
             intContainer.Add(5);
             Console.WriteLine(intContainer.Get()); // Output: 5
-            Container<string> stringContainer = new();
-            stringContainer.Add("hello Ahmed");
-            Console.WriteLine(stringContainer.Get()); // Output: hello Ahmed
+            //Container<string> stringContainer = new();
+            //stringContainer.Add("hello Ahmed");
+            //Console.WriteLine(stringContainer.Get()); // Output: hello Ahmed
             #endregion
 
             #region Q3
@@ -73,6 +73,7 @@
             product.GetAll().ForEach(p => Console.WriteLine($"Id: {p.Id}, Name: {p.Name}, Price: {p.Price}"));
 
             #endregion
+
             #region Q7
             // What is the 'struct' constraint?
             // The 'struct' constraint is a generic type constraint that restricts the type parameter to value types (structs) only. It ensures that the type used with the generic class or method is a value type, which can help improve performance and memory usage in certain scenarios.
@@ -83,6 +84,13 @@
             //Container<string> Names = new Container<string>();
             //Names.Value = "Ahmed"; // This line will cause a compile-time error because string is not a value type (struct).
 
+            #endregion
+
+            #region Q8
+            //What is the 'class' constraint?
+            // The 'Class' constraint is a generic type constraint that restricts the type parameter to Refrance types (Class) only like string or any class but not int.
+            ContainerString<string> Names = new ContainerString<string>();
+            Names.Value = "Ahmed"; // This line is valid because string is a ref type (class).
             #endregion
         }
     }
